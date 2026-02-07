@@ -27,13 +27,13 @@ public class StudentGradeTracker extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout(10, 10));
 
-        // ===== TITLE =====
+        
         JLabel title = new JLabel("Student Grade Tracker", JLabel.CENTER);
         title.setFont(new Font("Arial", Font.BOLD, 22));
         title.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         add(title, BorderLayout.NORTH);
 
-        // ===== INPUT PANEL =====
+       
         JPanel inputPanel = new JPanel(new GridLayout(2, 2, 10, 10));
         inputPanel.setBorder(BorderFactory.createTitledBorder("Enter Student Details"));
 
@@ -46,7 +46,7 @@ public class StudentGradeTracker extends JFrame {
 
         inputPanel.add(marksField);
 
-        // ===== BUTTON PANEL =====
+     
         JPanel buttonPanel = new JPanel();
         JButton addButton = new JButton("Add Student");
         JButton reportButton = new JButton("Generate Report");
@@ -54,7 +54,7 @@ public class StudentGradeTracker extends JFrame {
         buttonPanel.add(addButton);
         buttonPanel.add(reportButton);
 
-        // ===== CENTER PANEL =====
+     
         JPanel centerPanel = new JPanel(new BorderLayout(10, 10));
         centerPanel.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
         centerPanel.add(inputPanel, BorderLayout.NORTH);
@@ -62,7 +62,7 @@ public class StudentGradeTracker extends JFrame {
 
         add(centerPanel, BorderLayout.WEST);
 
-        // ===== OUTPUT AREA =====
+   
         outputArea = new JTextArea();
         outputArea.setEditable(false);
         outputArea.setFont(new Font("Monospaced", Font.PLAIN, 13));
@@ -72,7 +72,7 @@ public class StudentGradeTracker extends JFrame {
 
         add(scrollPane, BorderLayout.CENTER);
 
-        // ===== BUTTON ACTIONS =====
+
         addButton.addActionListener(e -> {
             try {
                 String name = nameField.getText();
@@ -126,3 +126,4 @@ public class StudentGradeTracker extends JFrame {
         new StudentGradeTracker();
     }
 }
+
